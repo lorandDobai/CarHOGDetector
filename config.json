@@ -1,0 +1,9 @@
+{
+    "datapath": "K:/Master/MachineLearning/dataset4",
+    "trainingData": "K:/Master/MachineLearning/dataset4/big_feature/dataset4_train.pkl",
+    "testingData": "K:/Master/MachineLearning/dataset4/big_feature/dataset4_test.pkl",
+     "savePath": "K:/Master/MachineLearning/models/swproj2",
+    "slidingWindowHeight": 152,
+    "slidingWindowWidth": 88,
+    "slidingStep":5
+}
