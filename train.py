@@ -18,7 +18,7 @@ def train_mlp_model(config):
         clf = SimpleMLPClassifier(input_size=1728, learning_rate=0.01, hidden_layer_size=8, regularization=1e-5,
                                   batch_size=16, training_epochs=10)
         X_train, y_train = X[train], y[train]
-        clf.fit(X_train, learning_utils.process_class_representation(y_train))
+        clf.fit(X_train, learning_utils.one_hot_encode(y_train))
 
 
         X_test, y_test = X[test], y[test]
