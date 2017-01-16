@@ -1,0 +1,13 @@
+{
+    "datapath": "K:/Master/Datasets/CarData/",
+    "trainingData": "K:/Master/Datasets/CarData/TrainImages",
+    "testingData": "K:/Master/Datasets/CarData/TestImages",
+    "scaleTestingData":"K:/Master/Datasets/CarData/TestImages_Scale",
+    "slidingWindowHeight": 40,
+    "slidingWindowWidth": 100,
+    "slidingStep":4,
+
+    "HOGCellSize":10,
+    "HOGBlockSize":4,
+    "HOGBins":9
+}
