@@ -92,13 +92,10 @@ def custom_hog(img, cell_size=6, n_bins=9):
     :rtype: np.ndarray
     """
     height, width,  = img.shape[:2]
-
     # number of cells on y-axis, respectively x-axis
     h_divs, w_divs = height // cell_size, width // cell_size
-
     # Size of HOG vector
     n_HOG = h_divs * w_divs * n_bins
-
     # Apply filter on image to find magnitude of gradient and angles.
     magnit = np.zeros((height,width), dtype=np.float64)
     angles = np.zeros((height,width), dtype=np.float64)
@@ -118,7 +115,19 @@ def custom_hog(img, cell_size=6, n_bins=9):
     return HOG.reshape(h_divs, w_divs, n_bins)
 
 
+@jit(boolean(float64[:, :, :], uint16, uint16, uint16, uint16), nopython=True)
+def is_empty_window(hog_matrix, y, ye, x, xe):
+    """
+    Check if sliding window of detector is over empty(black) region
 
+    :param hog_matrix: HOG cells contained in the window
+    :param y: top y coordinate
+    :param ye: bottom y coordinate
+    :param x: leftmost x coordinate
+    :param xe: rightmost x coordinate
+    :return: True if input is empty region else False
+    """
+    return hog_matrix[y:ye, x:xe].max() == 0
 
 
 
@@ -235,19 +244,12 @@ def overlap(annot_box, sliding_window):
     S = S1 + S2 - SI
     return SI / S
 
+def get_hog_feature_array(img, feature_count, cell_size, block_size, n_bins):
+
+    feature_arr = np.empty((feature_count,), dtype=np.float64)
+    hog_feature_arr(custom_hog(img, cell_size=cell_size, n_bins = n_bins),\
+                   block_size, n_bins, feature_arr)
+    return feature_arr
 
 
 
-@jit(boolean(float64[:, :, :], uint16, uint16, uint16, uint16), nopython=True)
-def is_empty_window(hog_matrix, y, ye, x, xe):
-    """
-    Check if sliding window of detector is over empty(black) region
-
-    :param hog_matrix: HOG cells contained in the window
-    :param y: top y coordinate
-    :param ye: bottom y coordinate
-    :param x: leftmost x coordinate
-    :param xe: rightmost x coordinate
-    :return: True if input is empty region else False
-    """
-    return hog_matrix[y:ye, x:xe].max() == 0

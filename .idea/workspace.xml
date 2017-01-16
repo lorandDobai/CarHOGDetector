@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23812747-29b1-433e-9ebb-4b4129a0efbc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/detector/config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/detector/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/detector/utils.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/train.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network/learning_utils.py" afterPath="$PROJECT_DIR$/neural_network/learning_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network/neural_network2.py" afterPath="$PROJECT_DIR$/neural_network/neural_network2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preprocessing/feature_extract.py" afterPath="$PROJECT_DIR$/preprocessing/feature_extract.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/neural_network/moons.data" afterPath="$PROJECT_DIR$/neural_network/test_data/moons.data" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/neural_network/moons.data_01.npy" afterPath="$PROJECT_DIR$/neural_network/test_data/moons.data_01.npy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/preprocessing/common_utils.py" afterPath="$PROJECT_DIR$/preprocessing/preprocess.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preprocessing/preprocess.py" afterPath="$PROJECT_DIR$/preprocessing/preprocess.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -90,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preprocess.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="preprocess.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/preprocessing/preprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="252" column="44" lean-forward="false" selection-start-line="252" selection-start-column="44" selection-end-line="252" selection-end-column="44" />
+            <state relative-caret-position="404">
+              <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -102,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detector/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="86" column="67" lean-forward="true" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
+            <state relative-caret-position="438">
+              <caret line="103" column="26" lean-forward="true" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -984,22 +972,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/preprocess.py">
+    <entry file="file://$PROJECT_DIR$/detector/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="252" column="44" lean-forward="false" selection-start-line="252" selection-start-column="44" selection-end-line="252" selection-end-column="44" />
+        <state relative-caret-position="438">
+          <caret line="103" column="26" lean-forward="true" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detector/main.py">
+    <entry file="file://$PROJECT_DIR$/preprocessing/preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="86" column="67" lean-forward="true" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
+        <state relative-caret-position="404">
+          <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
