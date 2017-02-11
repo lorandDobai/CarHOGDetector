@@ -60,7 +60,7 @@ def preview_model(model):
     data_path = config['scaleTestingData']
     w,h = config['slidingWindowWidth'], config['slidingWindowHeight']
     # Iterate through every file in test set
-    for pic_name in os.listdir(data_path):
+    for pic_name in os.listdir(data_path)[10:]:
         # Extract index from file name
         index = int(pic_name.split('.')[0].split('-')[1])
 
@@ -82,7 +82,7 @@ def preview_model(model):
                     fv = get_hog_feature_array(scaled_image[y:y+h,x:x+w],config['HOGFeatureCount'],\
                                                 config['HOGCellSize'],config['HOGBlockSize'], config['HOGBins'])
                     # retain only those who have a decision function probability higher than a threshold
-                    if(model.decision_function(np.array([fv]))[0][1]>=0.9):
+                    if(model.decision_function(np.array([fv]))[0][1]>=0.975):
                         rscale = 1/scaling
                         candidates.append(np.array(list(map(lambda x: int(x),
                                                             [x*rscale,y*rscale,(x+w)*rscale,(y+h)*rscale]))))
